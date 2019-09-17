@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sarcasm Detector</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            background-color: #f8f8f8
+        }
+    </style>
+</head>
+
+<body class="container">
+    <br>
+    <h1>Sarcasm Detector</h1><br><br>
+
+    <form action="{{ url_for('result') }}" method="POST">
+        <div class="md-form">
+            <textarea type="text" id="news" name="news" rows="2" class="form-control md-textarea"></textarea>
+            <label for="message">Insert News Headline To Detect Sarcasm</label>
+        </div>
+        <button class="btn btn-primary">Detect</button>
+    </form>
+    <br><br>
+    <img src="{{ image }}" alt="sarcasm?" height="300px" width="300px">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js">
+    </script>
+</body>
+
+</html>
